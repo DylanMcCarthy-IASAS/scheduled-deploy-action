@@ -1,0 +1,13 @@
+name: 'Scheduled Deployment'
+description: 'Hold deployment until scheduled time'
+inputs:
+  target-time:
+    description: 'Scheuled time'
+    required: true
+    default: '23:00'
+outputs:
+  deployment-time:
+    description: 'Time deployment resumed'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
